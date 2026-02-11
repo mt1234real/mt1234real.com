@@ -13,6 +13,11 @@ let curExp = parseInt(localStorage.getItem("expSaved")) || 0;
 const lvlTmp = document.getElementById("level");
 const expTmp = document.getElementById("exp");
 
+// Thêm sound effect
+const addTskSnd = new Audio("assets/audio/add-task-sound.mp3");
+const doneTskSnd = new Audio("assets/audio/done-task-sound.mp3");
+const lvlUpSnd = new Audio("assets/audio/level-up-sound.mp3")
+
 // Update điểm khi mới vào web
 updateHub();
 
@@ -28,10 +33,15 @@ function gainExp() {
     if (curExp === 100) {
         curExp = 0;
         curLvl += 1;
+        lvlUpSnd.play();
+        lvlUpSnd.currentTime = 0;
     }
     localStorage.setItem("levelSaved", JSON.stringify(curLvl));
     localStorage.setItem("expSaved", JSON.stringify(curExp));
     updateHub();
+    // Chạy Sound
+    doneTskSnd.play();
+    doneTskSnd.currentTime = 0;
 }
 
 //Khởi tạo dayFree
@@ -119,6 +129,10 @@ atkBtn.addEventListener("click", function () {
         return;
     }
 
+    // Chạy sound
+    addTskSnd.play();
+    addTskSnd.currentTime = 0;
+
     // Ghi lên màn hình
     showTheMonster(inpName);
 
@@ -126,7 +140,7 @@ atkBtn.addEventListener("click", function () {
     savedTsk.push(inpName);
     localStorage.setItem("myQst", JSON.stringify(savedTsk));
 
-    inpName = "";
+    tskInp.value = "";
     dayFree();
 });
 
