@@ -27,11 +27,11 @@ input {
     border: 4px solid #fff;
     background-color: transparent;
     color: white;
-    font-family: inherit;
+    font-family: 'Dear Pix';
     width: 60%;
     margin-right: 10px;
     outline: none;
-    font-size: 9px;
+    font-size: 20px;
 }
 
 button {
@@ -192,4 +192,8 @@ button:hover {
     h1 {
         font-size: 20px;
     }
+}
+@font-face {
+    font-family: 'Dear Pix';
+    src: url(assets/fonts/dearpix-1-94.otf);
 }
