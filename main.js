@@ -1,6 +1,7 @@
-const atkBtn = document.querySelector("button");
+const atkBtn = document.querySelector(".atk-button");
 const tskInp = document.querySelector("input");
 const qstLst = document.querySelector(".quest-list");
+const rstBtn = document.querySelector(".reset-button");
 
 // Đọc nhiệm vụ đã được lưu
 let savedTsk = JSON.parse(localStorage.getItem("myQst")) || [];
@@ -100,7 +101,7 @@ function showTheMonster(tskName) {
     qstLst.appendChild(newTsk);
 
 
-    // Animation when click button
+    // Animation when click atk-button
     newTsk.addEventListener("click", function () {
         // Animation bla bla
         newTxt.style.textDecoration = "line-through";
@@ -144,3 +145,12 @@ atkBtn.addEventListener("click", function () {
     dayFree();
 });
 
+// Hàm khi bấm nút reset
+rstBtn.addEventListener("click", function() {
+    lvlTmp.innerText = 1;
+    expTmp.innerText = 0;
+    curLvl = 1;
+    curExp = 0;
+    localStorage.setItem("levelSaved", "1");
+    localStorage.setItem("expSaved", "0");
+});

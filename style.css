@@ -4,6 +4,9 @@ body {
     font-family: monospace;
     text-align: center;
 }
+.footer-text {
+    margin-top: 30px;
+}
 .navbar {
     display: flex;
     background-color: #0f4c75;
@@ -37,6 +40,7 @@ body {
 .menu a:hover {
     color: #f5c546;
 }
+
 .hero {
     display: flex;
     gap: 80px;
@@ -44,6 +48,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 h1 {
     color: #f5c546;
     font-size: 24px;
@@ -57,13 +62,14 @@ h1 {
     text-align: left;
     max-width: 500px;
 }
+
 .game-board {
     background-color: #000000;
     border: 4px solid #d0e8f2;
     padding: 40px;
     width: 600px;
     text-align: center;
-    box-shadow: 10px 10px 0px #c83e28; 
+    box-shadow: 10px 10px 0px #c83e28;
     font-family: 'Press Start 2P';
     align-content: center;
 }
@@ -73,7 +79,7 @@ input {
     border: 4px solid #0f4c75;
     background-color: #c0e2fb;
     color: #c83e28;
-    font-family: 'Dear Pix', monospace; 
+    font-family: 'Dear Pix', monospace;
     width: 60%;
     margin-right: 10px;
     outline: none;
@@ -100,7 +106,9 @@ button:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0px #000;
     background-color: #fff;
+    border: 4px solid #f5c546;
 }
+
 .quest-list {
     margin-top: 30px;
     background-color: #1a1a1a;
@@ -130,6 +138,7 @@ button:hover {
     transform: scale(1.2);
     transform-origin: left;
 }
+
 .freeMsg p {
     color: #7ba038;
     text-align: center;
@@ -165,21 +174,74 @@ button:hover {
 }
 
 @keyframes blink {
-    50% { opacity: 0.5; }
+    50% {
+        opacity: 0.5;
+    }
 }
 
 @media only screen and (max-width: 768px) {
-    .navbar { justify-content: center; margin: 0 auto; }
-    .hero { flex-direction: column; }
-    .herocontent { text-align: center; max-width: 100%; }
-    .game-board { max-width: 400px; width: 90%; margin: 0 auto; }
-    h1 { font-size: 20px; }
-    input { width: 100%; margin-bottom: 10px; box-sizing: border-box; }
-    .hub-content { flex-direction: row; }
-    input::placeholder { font-size: 20px; }
+    .navbar {
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .herocontent {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .game-board {
+        max-width: 400px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    .hub-content {
+        flex-direction: row;
+    }
+
+    input::placeholder {
+        font-size: 20px;
+    }
 }
 
 @font-face {
     font-family: 'Dear Pix';
     src: url(assets/fonts/dearpix-1-94.otf);
+}
+
+/* Reset button */
+.reset-place {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.reset-warning {
+    margin-top: 10px;
+    color: #c83e28;
+    text-align: right;
+}
+
+.reset-button {
+    padding: 10px 20px;
+    font-size: 10px;
+    font-family: 'Press Start 2P';
+    text-align: left;
 }
