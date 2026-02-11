@@ -2,6 +2,9 @@ const atkBtn = document.querySelector(".atk-button");
 const tskInp = document.querySelector("input");
 const qstLst = document.querySelector(".quest-list");
 const rstBtn = document.querySelector(".reset-button");
+const gmBrd = document.querySelector(".game-board");
+const lvlBox = document.querySelector(".lvl-box");
+const expBox = document.querySelector(".exp-box");
 
 // Đọc nhiệm vụ đã được lưu
 let savedTsk = JSON.parse(localStorage.getItem("myQst")) || [];
@@ -28,6 +31,15 @@ function updateHub() {
     expTmp.innerText = JSON.stringify(curExp);
 }
 
+// Hàm shake
+function shakeTrigger(shakeObj) {
+    shakeObj.classList.add("shake-effect");
+
+    setTimeout(function() {
+        shakeObj.classList.remove("shake-effect");
+    }, 300);
+}
+
 // Hàm tăng điểm
 function gainExp() {
     curExp += 10;
@@ -36,6 +48,7 @@ function gainExp() {
         curLvl += 1;
         lvlUpSnd.play();
         lvlUpSnd.currentTime = 0;
+        shakeTrigger(lvlBox);
     }
     localStorage.setItem("levelSaved", JSON.stringify(curLvl));
     localStorage.setItem("expSaved", JSON.stringify(curExp));
@@ -43,6 +56,7 @@ function gainExp() {
     // Chạy Sound
     doneTskSnd.play();
     doneTskSnd.currentTime = 0;
+    shakeTrigger(expBox);
 }
 
 //Khởi tạo dayFree
@@ -118,6 +132,7 @@ function showTheMonster(tskName) {
             newTsk.remove();
             dayFree();
         }, 1000);
+        shakeTrigger(qstLst);
     });
     dayFree();
 }
@@ -143,6 +158,9 @@ atkBtn.addEventListener("click", function () {
 
     tskInp.value = "";
     dayFree();
+
+    // Thêm hiệu ứng rung
+    shakeTrigger(qstLst);
 });
 
 // Hàm khi bấm nút reset
@@ -153,4 +171,5 @@ rstBtn.addEventListener("click", function() {
     curExp = 0;
     localStorage.setItem("levelSaved", "1");
     localStorage.setItem("expSaved", "0");
+    shakeTrigger(gmBrd);
 });
