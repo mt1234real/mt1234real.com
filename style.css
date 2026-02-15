@@ -13,22 +13,16 @@ body {
     overflow-x: hidden;
 }
 
-/* --- CẤU TRÚC NỀN (LAYER) KỶ LUẬT --- */
-
-/* 1. VIDEO NỀN CHÍNH (Wave 3): Ghim đáy vĩnh viễn */
 .bg-fixed-bottom {
     position: fixed;
-    /* Chìa khóa: Luôn đứng yên */
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     object-fit: cover;
     z-index: -5;
-    /* Tầng sâu nhất */
 }
 
-/* 2. VIDEO PHẦN TRÊN (Wave 2): Chỉ hiện ở màn 1 */
 .bg-video-top {
     position: absolute;
     top: 0;
@@ -37,37 +31,26 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    /* Nằm dưới nội dung Nav/Banner nhưng trên nền Wave 3 */
 }
 
-/* 3. SECTION TOP: Màn che đầu tiên */
 .section-top {
     position: relative;
     height: 100vh;
-    /* Cao đúng 1 màn hình */
     width: 100%;
     overflow: hidden;
     z-index: 0;
-    /* Tầng trung gian */
     border-bottom: 8px solid white;
 }
 
-/* 4. SECTION BOTTOM: Nội dung trôi trên nền Wave 3 */
 .section-bottom {
     position: relative;
     min-height: 100vh;
-    /* Tự giãn nở theo nội dung */
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
-    /* Tầng trên cùng */
     padding-bottom: 80px;
-    /* Chừa chỗ cho Footer không che chữ */
-    /* Không đặt background để nhìn xuyên thấu xuống Wave 3 */
 }
-
-/* --- GIAO DIỆN UI --- */
 
 .nav-bar {
     background-color: rgb(240, 247, 249, 0.4);
@@ -184,16 +167,13 @@ input::placeholder {
     text-shadow: 0.5px 0.5px 2px black;
 }
 
-/* Style nội dung phần dưới */
 .bottom-content {
     justify-content: space-between;
     display: flex;
     gap: 30px;
     padding: 50px 30px;
-    /* Tăng padding để thoáng hơn */
     max-width: 80%;
 
-    /* Thêm nền mờ nhẹ để chữ dễ đọc trên video nền */
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 15px;
     box-shadow: 2px 2px 0px #b0c8d8;
@@ -207,7 +187,6 @@ input::placeholder {
 .i-2 img,
 .i-3 img {
     max-height: 180px;
-    /* Chỉnh lại ảnh to hơn chút cho đẹp */
     margin-bottom: 15px;
 }
 
@@ -217,9 +196,7 @@ input::placeholder {
     line-height: 1.5;
     font-size: 18px;
     color: #155e95;
-    /* Chỉnh màu chữ đậm hơn cho dễ đọc */
     flex: 1;
-    /* Chia đều 3 cột */
 }
 
 footer {
@@ -234,7 +211,6 @@ footer {
     z-index: 1000;
     gap: 10px;
     box-shadow: 0px -2px 0px #0f4c75;
-    /* Sửa bóng đổ ngược lên */
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     font-size: 17px;
