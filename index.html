@@ -4,61 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level Up Your Life - AI Gamification</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ZenG Adventure</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <nav class="navbar">
-        <div class="logo"><span style="font-size: 30px;">👾</span> RPG LIFE</div>
 
-        <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Sign in</a></li>
-        </ul>
-    </nav>
-    <header class="hero">
-        <div class="herocontent">
-            <h1>
-                TURN YOUR DEADLINE <br>
-                INTO MONSTERS
-            </h1>
-            <p>Fight, level up, and manage tasks in RPG style!</p>
-        </div>
-        <div class="game-board">
-            <h1>QUEST BOARD!!!</h1>
+    <video autoplay muted loop playsinline class="bg-fixed-bottom">
+        <source src="assets/background/wave3.mp4" type="video/mp4">
+    </video>
 
-            <div class="input-group">
-                <input type="text" placeholder="Type the name of your monster">
-                <button class="atk-button">ATTACK</button>
-                <div class="hub-content">
-                    <div class="lvl-box">
-                        <span>LVL</span>
-                        <span id="level">1</span>
-                    </div>
-                    <div class="exp-box">
-                        <span>EXP</span>
-                        <span id="exp">0</span>
-                    </div>
-                </div>
+    <header class="section-top">
+        <video autoplay muted loop playsinline class="bg-video-top">
+            <source src="assets/background/wave2.mp4" type="video/mp4">
+        </video>
+
+        <nav class="nav-bar">
+            <div class="proverb">one more day</div>
+            <div class="logo">ZenG</div>
+            <div class="sign-in">Sign in</div>
+        </nav>
+
+        <div class="banner">
+            <div class="tmp"></div>
+            <div class="login-banner">
+                <input type="text" placeholder="Type your challenge name">
+                <input type="password" placeholder="Enter your password">
+                <button class="login-button">Login/Sign up</button>
             </div>
-            <ul class="quest-list"></ul>
-        </div>
         </div>
     </header>
-    <footer class="footer">
-        <p class="footer-text">© 2026 RPG Life. Made with ❤️ by mt</p>
+
+    <main class="section-bottom">
+        <div class="bottom-content">
+            <div class="i-1">
+                <img src="assets/img/bottom-content/i/i-1.png"><br>
+                <div class="i-title">
+                    <strong>HẢI ĐỒ KHO BÁU</strong>
+                </div>
+                <p class="i-text">
+                    Biến những mục tiêu lớn thành một Hải Đồ Tinh Tú rõ ràng. Thực hiện các công việc nhỏ để đạt
+                    small-win mỗi ngày. Từng bước không ngừng nghỉ đạt được các mục tiêu. Và rồi con thuyền của bạn sẽ
+                    tìm được kho báu.
+                </p>
+            </div>
+            <div class="i-2">
+                <img src="assets/img/bottom-content/i/i-2.png"><br>
+                <div class="i-title">
+                    <strong>HOA TIÊU AI</strong>
+                </div>
+                <p class="i-text">
+                    Biến những áp lực khổng lồ thành lời chỉ dẫn an yên và thấu cảm. Bẻ nhỏ từng con sóng dữ (task khó)
+                    thành những gợn nước êm đềm để bạn dễ dàng lướt qua. Luôn bên cạnh lắng nghe, giúp bạn vững tay chèo
+                    giữa những ngày bão nổi.
+                </p>
+            </div>
+            <div class="i-3">
+                <img src="assets/img/bottom-content/i/i-3.png"><br>
+                <div class="i-title">
+                    <strong>HẠM ĐỘI BẤT BẠI</strong>
+                </div>
+                <p class="i-text">
+                    Biến những đốm sáng lẻ loi trên màn hình thành những đồng đội bằng xương bằng thịt. Bước ra đời
+                    thực, kết nối nhóm 3 người để cùng nhau thực hiện nhiệm vụ.Tìm thấy sự cộng hưởng và sức mạnh từ
+                    những người bạn đồng hành.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="cq-inf">
+        <p class="today">Hôm nay là ngày XX/XX/XXXX</p>
+        <p class="wind-lvl">Sức gió: 36km/h</p>
+        <p class="forecast">Hôm nay là một ngày tốt để khởi hành</p>
     </footer>
-    <div class="reset-place">
-        <button class="reset-button">RESET!</button>
-        <div class="reset-warning">If you click this button, your Level & Exp will be lost!!!</div>
-    </div>
-    <script src="main.js"></script>
+
 </body>
 
 </html>
