@@ -246,6 +246,7 @@ input::placeholder {
 .i-title {
     font-size: 30px;
 }
+
 .i-doro {
     text-align: left;
     font-size: 20px;
@@ -259,20 +260,126 @@ input::placeholder {
 footer {
     display: flex;
     flex-direction: column;
-    background-color: rgb(33,43,54, 0.6);
+    background-color: rgb(33, 43, 54, 0.6);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     padding: 10px 20px;
 }
+
 .message {
     max-width: 70%;
     font-size: 23px;
     margin: 20px auto 0 auto;
 }
+
 .after-all {
     font-size: 24px;
 }
+
 .copyright {
     padding: 45px;
     font-size: 18px;
+}
+
+.mobile-warning {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .mobile-warning {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+
+        background-color: #155e95;
+        z-index: 9999;
+    }
+
+    .warning-content {
+        background-color: #fdf8e8;
+        border: 6px solid #c83e28;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 10px 10px 0px #0f4c75;
+        max-width: 80%;
+        border-radius: 10px;
+    }
+
+    .warning-content h1 {
+        font-size: 30px;
+        color: #c83e28;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 0px #f5c546;
+        text-transform: uppercase;
+    }
+
+    .warning-content p {
+        font-size: 16px;
+        color: #155e95;
+        font-family: 'Dear Pix', monospace;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    .section-top,
+    .section-bottom,
+    .bg-fixed-bottom,
+    footer,
+    video {
+        display: none !important;
+    }
+}
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #155e95;
+    z-index: 10000;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+#loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-content {
+    text-align: center;
+    color: #f5c546;
+    font-family: 'Dear Pix', monospace;
+}
+
+.loading-content h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-shadow: 4px 4px 0px #0f4c75;
+}
+
+.loading-content p {
+    font-size: 18px;
+    color: #fdf8e8;
+}
+
+.blink-text {
+    animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
 }
