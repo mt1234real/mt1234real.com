@@ -59,6 +59,7 @@ body {
     justify-content: center;
     gap: 100px;
     margin: 100px 50px;
+
 }
 
 .nav-bar {
@@ -285,7 +286,7 @@ footer {
     display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     .mobile-warning {
         display: flex;
         justify-content: center;
