@@ -42,6 +42,8 @@ body {
     overflow: hidden;
     z-index: 0;
     border-bottom: 8px solid white;
+    display: flex;
+    flex-direction: column;
 }
 
 .section-bottom {
@@ -52,6 +54,11 @@ body {
     justify-content: center;
     z-index: 1;
     padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+    margin: 100px 50px;
 }
 
 .nav-bar {
@@ -145,7 +152,7 @@ body {
 
 input::placeholder {
     color: #afafaf;
-    font-size: 16px;
+    font-size: 19px;
 }
 
 .login-button {
@@ -201,7 +208,7 @@ input::placeholder {
     flex: 1;
 }
 
-footer {
+.cq-inf {
     background-color: rgb(240, 247, 249, 0.4);
     display: flex;
     align-items: center;
@@ -238,4 +245,34 @@ footer {
 
 .i-title {
     font-size: 30px;
+}
+.i-doro {
+    text-align: left;
+    font-size: 20px;
+    margin: 17px 0px;
+}
+
+.heart-title {
+    font-size: 29px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(33,43,54, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 10px 20px;
+}
+.message {
+    max-width: 70%;
+    font-size: 23px;
+    margin: 20px auto 0 auto;
+}
+.after-all {
+    font-size: 24px;
+}
+.copyright {
+    padding: 45px;
+    font-size: 18px;
 }
